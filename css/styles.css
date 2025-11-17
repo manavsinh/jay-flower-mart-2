@@ -1,0 +1,33 @@
+
+/* styles.css - professional minimal floral theme */
+:root{
+  --accent:#b66aa5;
+  --accent-2:#f4d6e6;
+  --dark:#2b2b2b;
+  --muted:#6b6b6b;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--dark); background:#fff;}
+.container{max-width:var(--max-width); margin:0 auto; padding:28px;}
+.header{display:flex; align-items:center; justify-content:space-between; padding:18px 0;}
+.brand{display:flex; align-items:center; gap:14px;}
+.logo{
+  width:64px; height:64px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#f6b1d0);
+  display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:18px;
+  box-shadow: 0 6px 18px rgba(182,106,165,0.18);
+}
+nav a{margin-left:18px; color:var(--muted); text-decoration:none; font-weight:600;}
+.hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center; margin-top:20px;}
+.hero .lead{font-size:28px; line-height:1.25}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.8),white); border-radius:14px; padding:18px; box-shadow:0 8px 30px rgba(40,40,40,0.06);}
+.gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px;}
+.gallery img{width:100%; border-radius:10px; display:block;}
+.footer{margin-top:40px; padding:20px 0; border-top:1px solid #f0e9f3; color:var(--muted);}
+.cta{display:inline-block; padding:12px 18px; background:var(--accent); color:white; border-radius:10px; text-decoration:none; font-weight:700;}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr; }
+  .gallery{grid-template-columns:repeat(2,1fr);}
+  .contact-grid{grid-template-columns:1fr;}
+}
